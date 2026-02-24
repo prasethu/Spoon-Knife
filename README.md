@@ -4,9 +4,9 @@
 
 [Install in VS (direct)](vsweb+mcp:/install?%7B%22name%22%3A%22foundry-mcp-remote%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.ai.azure.com%22%7D)
 
-**2. Via GitHub Pages redirect (should WORK):**
+**2. Via localhost redirect (start server first!):**
 
-[Install foundry-mcp-remote in Visual Studio](https://prasethu.github.io/Spoon-Knife/redirect.html?url=vsweb%2Bmcp%3A%2Finstall%3F%7B%22name%22%3A%22foundry-mcp-remote%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.ai.azure.com%22%7D)
+[Install foundry-mcp-remote in Visual Studio](http://localhost:9090/?url=vsweb%2Bmcp%3A%2Finstall%3F%7B%22name%22%3A%22foundry-mcp-remote%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.ai.azure.com%22%7D)
 
 **3. VS Code equivalent (for comparison):**
 
