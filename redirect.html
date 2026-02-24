@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install MCP Server in Visual Studio</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: #f6f8fa; color: #24292f; }
+        .container { text-align: center; max-width: 480px; padding: 2rem; }
+        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        p { color: #57606a; }
+        .error { color: #cf222e; display: none; }
+        a.button { display: inline-block; margin-top: 1rem; padding: 0.6rem 1.5rem; background: #7c3aed; color: #fff; border-radius: 6px; text-decoration: none; font-weight: 600; }
+        a.button:hover { background: #6d28d9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Opening Visual Studio…</h1>
+        <p id="status">Redirecting to the protocol handler.</p>
+        <p id="error" class="error"></p>
+        <a id="manual-link" class="button" style="display:none">Click here if Visual Studio didn't open</a>
+    </div>
+    <script>
+        (function () {
+            // Avoid URLSearchParams which decodes '+' as space (breaks vsweb+mcp scheme)
+            const match = location.search.match(/[?&]url=([^&]*)/);
+            const target = match ? decodeURIComponent(match[1]) : null;
+
+            if (!target || !/^vsweb\+mcp:/i.test(target)) {
+                document.getElementById('status').style.display = 'none';
+                const err = document.getElementById('error');
+                err.textContent = 'Invalid or missing protocol URL. Expected a vsweb+mcp:// URL in the "url" query parameter.';
+                err.style.display = 'block';
+                return;
+            }
+
+            // Show manual fallback link
+            const link = document.getElementById('manual-link');
+            link.href = target;
+            link.style.display = 'inline-block';
+
+            // Attempt automatic redirect
+            window.location.href = target;
+        })();
+    </script>
+</body>
+</html>
