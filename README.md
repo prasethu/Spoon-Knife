@@ -2,8 +2,18 @@
 
 This repository is meant to provide an example for *forking* a repository on GitHub.
 
-Creating a *fork* is producing a personal copy of someone else's project. Forks act as a sort of bridge between the original repository and your personal copy. You can submit *Pull Requests* to help make other people's projects better by offering your changes up to the original project. Forking is at the core of social coding at GitHub.
+---
 
-After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
+### MCP Protocol Handler Test
 
-For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
+**Direct protocol link (will GitHub sanitize this?):**
+
+[Install MCP Server in VS (direct)](vsweb+mcp:/install?%7B%22name%22%3A%22foundry-mcp-remote%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.ai.azure.com%22%7D)
+
+**VS Code link for comparison:**
+
+[Install in VS Code (direct)](vscode:mcp/install?%7B%22name%22%3A%22foundry-mcp-remote%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.ai.azure.com%22%7D)
+
+**Normal https link (control):**
+
+[GitHub](https://github.com)
